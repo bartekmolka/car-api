@@ -8,7 +8,7 @@ Written in Rust & Rocket.rs 🦀🚀
 
 #### Running by cargo
 
-You just need to run following command:
+You just need to run the following command:
 
 ```
 cargo run
@@ -24,7 +24,7 @@ docker build -t your_image_name .
 
 > **Note** you can replace *your_image_name* by whatever name you want the image of app to be
 
-To start image and create a container  
+To start image and create a container type:
 
 ```
 docker run --name your_container_name -p 8000:8000 your_image_name
