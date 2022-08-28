@@ -31,7 +31,8 @@ docker run --name your_container_name -p 8000:8000 your_image_name
 ```
 
 > **Note** you can replace *your_container_name* by whatever name you want the container to be
-> **Note** If you're running on windows you have to open *127.0.0.1:8000* instead of *0.0.0.0:8000*
+
+Then you can open app on for example *[localhost:8000](http://localhost:8000/probabilityOfUnitInjectorFail?vin=WDBRF40J43F433102)*
 ---
 
 ©bartekmolka 2022
