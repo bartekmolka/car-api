@@ -27,34 +27,20 @@ struct VIN {
 //adding first route
 #[get("/calculateDisselUsageForDistance?<fuel..>")]
 fn fuel_consumption(fuel: Form<Fuel>) -> String {
-    if let fuel = fuel {
-        if let distance = fuel.distance {
-            if let _year = fuel.yearofproduction {
-                if let usage = fuel.fuelusageper100km {
-                    let consumption = (distance as f32 * usage)/100.0;
-                    return format!("{}", consumption);
-                }
-                else {
-                    "Hi, no usage!".to_string()
-                }
-            }
-            else {
-                "Hi, no year!".to_string()
-            }
-        }
-        else {
-            "Hi, no distance!".to_string()
-        }
-    } else {
-        "We're gonna need a name, and only a name.".into()
-    }
+    let fuel = fuel;
+    let distance = fuel.distance;
+    let _year = fuel.yearofproduction;
+    let usage = fuel.fuelusageper100km;
+    let consumption = (distance as f32 * usage)/100.0;
+    return format!("Your fuel consumption will be equal = {}", consumption);
+    
 }
 
 //adding second route
 #[get("/probabilityOfUnitInjectorFail?<vin..>")]
 fn probability_of_failure(vin: Form<VIN>) -> String{
     let mut rng = rand::thread_rng();
-    return format!("{}", rng.gen_range(0, 100) as f32/100.0);
+    return format!("Probability of unit injector fail is equal to {}", rng.gen_range(0, 100) as f32/100.0);
 }
 
 //server setup
