@@ -32,7 +32,10 @@ docker run --name your_container_name -p 8000:8000 your_image_name
 
 > **Note** you can replace *your_container_name* by whatever name you want the container to be
 
-Then you can open app on *http://localhost:8000/probabilityOfUnitInjectorFail?vin=WDBRF40J43F433102* (one of two routes)
+Then you can open app on:
+- *http://localhost:8000/calculateDisselUsageForDistance?distance=108&yearofproduction=1999&fuelusageper100km=7.6* 
+- *http://localhost:8000/probabilityOfUnitInjectorFail?vin=WDBRF40J43F433102* 
+
 ---
 
 ©bartekmolka 2022
